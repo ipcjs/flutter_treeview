@@ -1,5 +1,7 @@
 # flutter_treeview
 
+> This repository is a fork of [flutter_treeview](https://pub.dev/packages/flutter_treeview)
+
 A hierarchical data widget for your flutter apps. 
 
 It offers a number of options for customizing the appearance and handling user interaction.
