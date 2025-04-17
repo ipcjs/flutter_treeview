@@ -26,7 +26,7 @@ class Utilities {
   static const Color WHITE = Color.fromARGB(255, 255, 255, 255);
 
   static String toRGBA(Color color) {
-    return 'rgba(${color.red},${color.green},${color.blue},${color.alpha / 255})';
+    return 'rgba(${color.red},${color.green},${color.blue},${color.a})';
   }
 
   static Color textColor(Color color) {
