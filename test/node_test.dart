@@ -45,6 +45,8 @@ void main() {
         "key": "12345",
         "label": "Home",
         "icon": null,
+        "iconColor": null,
+        "selectedIconColor": null,
         "expanded": false,
         "parent": false,
         "children": [],
@@ -77,6 +79,8 @@ void main() {
       final expectedMap = {
         "label": "Home",
         "icon": null,
+        "iconColor": null,
+        "selectedIconColor": null,
         "expanded": true,
         "parent": false,
         "children": [
@@ -84,6 +88,8 @@ void main() {
             "key": "12345b",
             "label": "Basement",
             "icon": null,
+            "iconColor": null,
+            "selectedIconColor": null,
             "expanded": false,
             "parent": false,
             "children": [],
@@ -92,6 +98,8 @@ void main() {
             "key": "12345k",
             "label": "Kitchen",
             "icon": null,
+            "iconColor": null,
+            "selectedIconColor": null,
             "expanded": false,
             "parent": false,
             "children": [],
@@ -113,7 +121,7 @@ void main() {
       Person lukas = Person(age: 3);
       Animal otis = Animal(legs: 4);
       final Node node1 =
-      Node<Person>(label: 'Lukas', key: 'lukas', data: lukas);
+          Node<Person>(label: 'Lukas', key: 'lukas', data: lukas);
       Node node2 = Node.fromLabel('Friend');
       expect(node1.hasData, true);
       expect(node1.data.runtimeType, Person);
@@ -124,7 +132,7 @@ void main() {
       expect(node2.data.runtimeType, Animal);
       expect(node2.hasData, true);
       final Node node3 =
-      Node<double>(label: 'Building Height', key: 'bldghgt', data: 100.4);
+          Node<double>(label: 'Building Height', key: 'bldghgt', data: 100.4);
       expect(node3.hasData, true);
       expect(node3.data.runtimeType, double);
     });
@@ -132,9 +140,9 @@ void main() {
       Person lukas = Person(age: 3);
       Animal otis = Animal(legs: 4);
 
-      final Node node2 =
-          Node<Animal>(label: 'Otis', key: 'otis', data: otis);
-      final Node node1 = Node<Person>(label: 'Lukas', key: 'lukas', data: lukas, children: [node2]);
+      final Node node2 = Node<Animal>(label: 'Otis', key: 'otis', data: otis);
+      final Node node1 = Node<Person>(
+          label: 'Lukas', key: 'lukas', data: lukas, children: [node2]);
 
       expect(node1.hasData, true);
       expect(node1.children.first.hasData, true);

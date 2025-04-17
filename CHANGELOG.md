@@ -1,3 +1,8 @@
+## [1.0.7+1]
+
+### Updated
+* Removed getColor method from utilities file and removed all tests related to the method.
+
 ## [1.0.6+1]
 
 ### Added
